@@ -1,0 +1,50 @@
+head
+  meta(charset="UTF-8")
+  link( href="/base.css" rel="stylesheet")
+  style.
+    .product {
+      display: flex;
+      flex-direction: row;
+      background: linear-gradient( 26deg, #e61c5d, #ffbd39 );
+      padding: 15px;
+      border-radius: 5px;
+      justify-content: center;
+    }
+    .price {
+      font-family: Arial;
+      font-size: 26px;
+      margin-top: -10px;
+    }
+    .vert {
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      padding-right: 10px;
+    }
+    .flow {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 40px;
+      row-gap: 20px;
+    }
+    li {
+      flex-grow: 4;
+    }
+    h1 {
+      display: flex;
+      justify-content: center;
+    }
+body
+  h1 htw-kbe-jneidel
+  ul.flow
+    li
+      a(href=`/products`)
+        div.product
+          div.vert
+            p Products
+    li
+      a(href=`/storeLocations`)
+        div.product
+          div.vert
+            p Store Locations

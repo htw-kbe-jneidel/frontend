@@ -1,0 +1,66 @@
+head
+  meta(charset="UTF-8")
+  link( href="/base.css" rel="stylesheet")
+  style.
+    img {
+      height: 200px;
+    }
+    .product {
+      display: flex;
+      flex-direction: row;
+      background: linear-gradient( 26deg, #e61c5d, #ffbd39 );
+      padding: 15px;
+      border-radius: 5px;
+      justify-content: center;
+    }
+    td p {
+      font-family: Arial;
+      font-size: 26px;
+    }
+    .vert {
+      display: flex;
+      flex-direction: column;
+    }
+    h1 {
+      display: flex;
+      justify-content: center;
+    }
+    .stores {
+      display: flex;
+      flex-direction: row;
+      background: linear-gradient( 26deg, #e61c5d, #ffbd39 );
+      padding: 15px;
+      border-radius: 5px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .store p {
+      font-size: 24px;
+    }
+body
+  h1=product.name
+  div.product
+    table
+      div.vert
+        tr
+          td
+            p UVP:
+          td
+            p=product.price + "€"
+        tr
+          td
+            p VAT:
+          td
+            p=vat + "€"
+    img(src=product.image)
+  div.stores
+    ul
+      for store in storeLocations
+        li.store
+          a(href="/storeLocation/" + store.storeLocationId)
+            p.store-name=store.name
+          if store.amount > 0
+            p=`Still available: ${store.amount}x`
+          else
+            p=`Unavailable. But another store is within ${unavailable[1].walkingDistanceInMinutes} minutes of walking (${unavailable[1].walkingDistanceInKilometers} km) has this item stocked! `
+              a( href=unavailable[1].osmLink ) Route

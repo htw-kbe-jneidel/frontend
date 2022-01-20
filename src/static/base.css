@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient( 130deg, #FFBD39, #930077 );
+}
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
