@@ -62,5 +62,5 @@ body
           if store.amount > 0
             p=`Still available: ${store.amount}x`
           else
-            p=`Unavailable. But another store is within ${unavailable[1].walkingDistanceInMinutes} minutes of walking (${unavailable[1].walkingDistanceInKilometers} km) has this item stocked! `
+            p=`Unavailable. But another store within ${unavailable[1].walkingDistanceInMinutes} minutes of walking (${unavailable[1].walkingDistanceInKilometers} km) has this item stocked! `
               a( href=unavailable[1].osmLink ) Route
